@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+    <img class="image-gradient" src="gradient.png" alt="gradient">
+    <div class="layer-blur"></div>
+
+    <div class="container">
+        <header>
+            <h1 class="logo">NJACK</h1>
+            <nav>
+                <a href="">HOME</a>
+                <a href="">TEAMS</a>
+                <a href="">RESOURCES</a>
+                <a href="">ABOUT US</a>
+            </nav>
+            <button class="btn-signing">SIGNING </button>
+
+        </header>
+        <main>
+            <div class="content">
+                <div class="tag-box">
+                    <div class="tag">INTRODUCING &wedbar;</div>
+                </div>
+                <h1>COMPETITIVE PROGRAMMING FOR<br> DEVELOPERS </h1>
+                <p class="description">
+                    Dear Participants,<br><br>
+
+                    We appreciate the effort and dedication you have been putting into competitive programming in
+                    preparation for the sub-coordinator selections. To support and enhance your preparation, Team CP IIT
+                    Patna has curated a set of practice questions for you.
+
+                    Kindly fill out the form provided and don't forget to share your valuable feedback.
+                    <br><br>
+                    Best regards,<br>
+Team CP IIT Patna
+
+                </p>
+                <div class="buttons">
+                    <a href="#" class="btn-get-started">Documentation &gt;</a>
+                    <button id="apply" class="btn-signing-main"> APPLY &gt;</button>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <section id="contact">
+    <div class="login-box hide">
+        <h2>STUDENT CREDENTIAL</h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="03834ce0-3ab7-4eed-a958-a0c6859e6c09">
+            <div class="user-box">
+                <input type="text" name="name" required>
+                <label>Name</label>
+            </div>
+            <div class="gender-box">
+                <label><input type="radio" name="gender" value="Male" required> Male</label>
+                <label><input type="radio" name="gender" value="Female" required> Female</label>
+            </div>
+            <div class="user-box">
+                <input type="number" name="rating" required>
+                <label>Current Rating</label>
+            </div>
+            <div class="user-box">
+                <input type="text" name="Id" required>
+                <label>Codeforces ID</label>
+            </div>
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            <button type="submit">Submit Form</button>
+            <button id="cancel">Cancel</button>
+        </form>
+    </div>
+</section>
+
+
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.96/build/spline-viewer.js"></script>
+    <spline-viewer class="robot-3d" url="https://prod.spline.design/B9zWDb0ROmjcdnHu/scene.splinecode"></spline-viewer>
+    <script>
+      let  btn = document.querySelector("#apply");
+      let  btn1 = document.querySelector("#cancel");
+        btn.addEventListener("click",()=>{
+            document.querySelector(".login-box").classList.remove("hide");
+            document.querySelector(".robot-3d").classList.add("blur");
+            document.querySelector(".container").classList.add("blur");
+            btn.disabled=true;
+           
+        })
+        btn1.addEventListener("click",()=>{
+        document.querySelector(".login-box").classList.add("hide");
+        document.querySelector(".container").classList.remove("blur");
+        document.querySelector(".robot-3d").classList.remove("blur");
+        btn.disabled=false;
+})
+
+    </script>
+</body>
+
+</html>
